@@ -1,0 +1,27 @@
+﻿@model System.Collections.Generic.List<UhAitpMvc.Models.Human>
+
+<nav>
+  <a href="/Home/New">Create a new human</a>
+</nav>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Email</th>
+      <th>Hobby</th>
+    </tr>
+  </thead>
+  <tbody>
+    @foreach (var human in Model)
+    {
+      <tr>
+        <td>@human.Id</td>
+        <td>
+          <a asp-action="Details" asp-route-id="@human.Id">@human.Email</a>
+        </td>
+        <td>@human.Hobby</td>
+      </tr>
+    }
+  </tbody>
+</table>

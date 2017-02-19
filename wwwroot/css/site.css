@@ -1,0 +1,29 @@
+﻿body {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set widths on the form inputs since otherwise they're 100% wide */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+header {
+    margin-bottom: 1em;
+}
+
+dt {
+    float: left;
+    margin-right: 1em;
+}
+
+dt:after {
+    content: ':';
+}
+
+.logo {
+    width: 250px;
+    height: auto;
+}

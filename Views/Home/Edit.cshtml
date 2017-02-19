@@ -1,0 +1,30 @@
+@model UhAitpMvc.Models.Human
+
+@{
+  var options = new [] { "Reading", "Motorcycle riding", "Painting", "Running an elite collegiate organization", "Target shooting" };
+}
+
+<form method="POST" asp-action="Update" asp-route-id="@Model.Id">
+  <input type="email"
+         asp-for="@Model.Email"
+         required placeholder="Enter your email">
+  <select name="Hobby" required>
+    <option value="">Choose your hobby</option>
+    @foreach (var option in options)
+    {
+      if (option == Model.Hobby)
+      {
+        <option selected>@option</option>
+      }
+      else
+      {
+        <option>@option</option>
+      }
+    }
+  </select>
+  <button type="submit">Send some info</button>
+</form>
+
+<script>
+  var myFavoriteSpaceship = "Death Star";
+</script>

@@ -1,0 +1,16 @@
+@model UhAitpMvc.Models.Human
+
+<dl>
+    <dt>Id</dt>
+    <dd>@Model.Id</dd>
+    <dt>Email</dt>
+    <dd>@Model.Email</dd>
+    <dt>Hobby</dt>
+    <dd>@Model.Hobby</dd>
+</dl>
+<p>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a>
+</p>
+<form method="POST" asp-action="Delete" asp-route-id="@Model.Id">
+    <a href="#" class="delete-button">¡DELETE!</a>
+</form>
